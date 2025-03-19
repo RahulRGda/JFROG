@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/csv"
+	"fmt"
 	"os"
 	"path/filepath"
 
@@ -12,7 +13,6 @@ import (
 func main() {
 	logging.InitLogger()
 	args := os.Args
-
 	if len(args) != 2 {
 		logging.Info("Usage: readCSV <csvfilename>")
 		return
@@ -47,7 +47,7 @@ func main() {
 		logging.Error("Error opening file: %v\n", err)
 		return
 	}
-	logging.Info("Reading file %s ....\n", csvFilename)
+	logging.Info(fmt.Sprintf("Reading file %s ....\n", csvFilename))
 
 	defer file.Close()
 

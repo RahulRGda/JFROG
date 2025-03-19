@@ -76,7 +76,6 @@ func writeResultsToCSV(results []urlprocessor.TaskResult) error {
 
 	for _, result := range results {
 		row := []string{result.URL, result.Status, result.Filename, result.Error}
-		fmt.Println(row)
 		if err := writer.Write(row); err != nil {
 			return err
 		}
