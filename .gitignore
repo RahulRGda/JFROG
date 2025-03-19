@@ -2,6 +2,7 @@ output/*
 
 *.txt
 result/*
+!result/.gitkeep
 readCSV
 
 .vscode/
