@@ -1,0 +1,7 @@
+/output/*
+
+*.txt
+/result/*
+readCSV
+
+.vscode/
