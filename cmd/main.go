@@ -5,8 +5,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/jfrog/assesment/pkg/logging"
-	"github.com/jfrog/assesment/pkg/workerpool"
+	"github.com/RahulRGda/jfrog/pkg/logging"
+	"github.com/RahulRGda/jfrog/pkg/workerpool"
 )
 
 func main() {
