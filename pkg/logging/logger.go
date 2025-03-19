@@ -41,6 +41,7 @@ func getCurrentFileDir() (string, error) {
 
 // Initialize all standard fields that is coming from app conf.
 func InitLogger() {
+	fmt.Println("Initializing logger")
 	currentDir, err := getCurrentFileDir()
 	if err != nil {
 		Panic("Error getting current directory: %v", err)
@@ -137,8 +138,11 @@ func getLogTypeMapping(logLevelConfig string) {
 }
 
 func RegisterLogger() {
-
-	filepathenv = readenv.GetEnvString("onelog_path", "../onelog/errors.log")
+	currentDir, err := getCurrentFileDir()
+	if err != nil {
+		Panic("Error getting current directory: %v", err)
+	}
+	filepathenv = readenv.GetEnvString("onelog_path", filepath.Dir(filepath.Dir(currentDir))+"/onelog/errors.log")
 	maxSize = readenv.GetEnvInt("onelog_maxsize", 2000)
 	maxFiles = readenv.GetEnvInt("onelog_maxfiles", 3)
 	maxDays = readenv.GetEnvInt("onelog_maxdays", 1)
