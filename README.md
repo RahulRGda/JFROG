@@ -26,12 +26,14 @@ To run the application, provide the path to the CSV file as a command-line argum
 ./readCSV data/<filename.csv>
 ```
 
-# Finding Url contents stored in output folder.
+# Output.
 
-A file with unquie filename(generated using url) is created and url content is stored in txt format.
+1. **Downloaded URL Content:**
+    The downloaded content from each URL is saved as a .txt file with a unique, randomly generated filename within the output folder
 
-# Finding Status of each url and its corresponding file name.
+2. **URL Processing Status and Results:**
+    A CSV file is generated in the results folder. This file contains the processing status of each URL, including the corresponding output filename (if successful) or the error message (if the URL download failed). The results are stored in files organized by date.
 
-A file(csv) is generated in result folder, Which contains the status of each url and its corresponding filename/error is stored in result file.
+# Errors Logging.
 
-
+All errors encountered during the application's execution are logged to a file within the onelog folder.
