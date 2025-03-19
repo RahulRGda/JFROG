@@ -15,7 +15,7 @@ This command-line application downloads content from URLs listed in a CSV file, 
     go build -o readCSV cmd/main.go
     ```
 
-# Add data file(csg file) to data folder.
+# Add data file(csv file) to data folder.
 <filename.csv>
 
 ## Running the Application
